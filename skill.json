@@ -1,0 +1,38 @@
+{
+  "name": "genpark-full-codebase-dependency-graph-pr-synthesizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Full-codebase dependency graph indexer predicting cross-module side effects and synthesizing verified pull requests.",
+  "author": "genpark",
+  "category": "codebase-agent",
+  "tags": [
+    "yc-2026",
+    "codebase-graph",
+    "pr-synthesizer",
+    "automated-refactoring",
+    "side-effect-analyzer"
+  ],
+  "inputs": {
+    "task_instruction": {
+      "type": "string"
+    },
+    "target_repo_url": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "pull_request_job_id": {
+      "type": "string"
+    },
+    "files_analyzed_in_graph": {
+      "type": "integer"
+    },
+    "modified_files_count": {
+      "type": "integer"
+    },
+    "patch_unified_diff_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
